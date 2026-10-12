@@ -1,0 +1,155 @@
+name: Build, Test & Release CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # STAGE 1: AUTOMATED MULTI-OS TESTING & CODE VALIDATION
+  # ---------------------------------------------------------------------------
+  test-and-validate:
+    name: Test & Validate (Python ${{ matrix.python-version }} on ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.11"]
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install System Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-glx libglib2.0-0 xvfb
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          pip install -r requirements.txt
+
+      - name: Lint Source Code with Flake8
+        run: |
+          # Stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # Warnings check
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
+
+      - name: Bytecode Compilation Verification
+        run: |
+          python -m compileall -q .
+
+      - name: Unit & Architectural Integration Tests
+        run: |
+          python -c "
+          import member_1, member_2, member_3, member_4, member_5, main
+          from member_3.member_3 import GestureClassifier, GestureType, GESTURE_DICTIONARY
+          from member_4.member_4 import OSMacroController
+
+          # Validate Gesture Dictionary
+          assert len(GESTURE_DICTIONARY) >= 9, 'Gesture dictionary must contain at least 9 gestures'
+
+          # Validate Context Routing
+          osm = OSMacroController()
+          assert osm.detect_context('Adobe Premiere Pro 2024') == 'premiere'
+          assert osm.detect_context('Figma - UX Design') == 'figma'
+
+          print('All automated verification assertions passed successfully!')
+          "
+
+      - name: End-to-End Subsystem Verification Suite
+        run: |
+          python verify_all.py
+
+  # ---------------------------------------------------------------------------
+  # STAGE 2: STANDALONE .EXE PACKAGING VIA PYINSTALLER
+  # ---------------------------------------------------------------------------
+  build-standalone-executable:
+    name: Build Standalone Windows .EXE (PyInstaller)
+    needs: test-and-validate
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies & PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller
+          pip install -r requirements.txt
+
+      - name: Build Standalone Windows Executable
+        run: |
+          pyinstaller member_5/gesture_controller.spec --clean --noconfirm
+
+      - name: Upload Executable Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GestureStudioPro-Windows-x64
+          path: dist/GestureStudioPro.exe
+          retention-days: 14
+
+      - name: Publish to GitHub Releases (On Version Tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/GestureStudioPro.exe
+          name: Gesture Studio Pro ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+
+  # ---------------------------------------------------------------------------
+  # STAGE 3: DEPLOY DEDICATED DISTRIBUTION LANDING PAGE TO GITHUB PAGES
+  # ---------------------------------------------------------------------------
+  deploy-landing-page:
+    name: Deploy Distribution Landing Page
+    needs: test-and-validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Landing Page Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

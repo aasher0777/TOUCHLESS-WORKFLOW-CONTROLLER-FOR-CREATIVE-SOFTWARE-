@@ -1,0 +1,10 @@
+{
+  "input_dim": 42,
+  "num_classes": 3,
+  "classes": [
+    "Paper",
+    "Scissor",
+    "Stone"
+  ],
+  "test_accuracy": 98.6237513873474
+}

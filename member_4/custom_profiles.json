@@ -1,0 +1,365 @@
+{
+  "default": {
+    "PINCH": {
+      "description": "Left Click",
+      "action_type": "click",
+      "keys": []
+    },
+    "SWIPE_LEFT": {
+      "description": "Previous Item",
+      "action_type": "hotkey",
+      "keys": [
+        "alt",
+        "left"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Next Item",
+      "action_type": "hotkey",
+      "keys": [
+        "alt",
+        "right"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Volume Up",
+      "action_type": "press",
+      "keys": [
+        "volumeup"
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Volume Down",
+      "action_type": "press",
+      "keys": [
+        "volumedown"
+      ]
+    },
+    "OPEN_PALM": {
+      "description": "Play / Pause",
+      "action_type": "press",
+      "keys": [
+        "playpause"
+      ]
+    }
+  },
+  "photoshop": {
+    "PINCH": {
+      "description": "Paint / Click & Drag",
+      "action_type": "click",
+      "keys": []
+    },
+    "POINTING": {
+      "description": "Brush Tool",
+      "action_type": "press",
+      "keys": [
+        "b"
+      ]
+    },
+    "SWIPE_LEFT": {
+      "description": "Undo Canvas Action",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "z"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Redo Canvas Action",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "shift",
+        "z"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Zoom In Canvas",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "="
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Zoom Out Canvas",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "-"
+      ]
+    },
+    "OPEN_PALM": {
+      "description": "Hand / Pan Tool",
+      "action_type": "press",
+      "keys": [
+        "h"
+      ]
+    },
+    "FIST": {
+      "description": "Deselect Selection",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "d"
+      ]
+    },
+    "PEACE": {
+      "description": "Eyedropper Color Picker",
+      "action_type": "press",
+      "keys": [
+        "i"
+      ]
+    }
+  },
+  "premiere": {
+    "PINCH": {
+      "description": "Split Clip / Razor Cut",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "k"
+      ]
+    },
+    "SWIPE_LEFT": {
+      "description": "Previous Edit Point",
+      "action_type": "hotkey",
+      "keys": [
+        "shift",
+        "left"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Next Edit Point",
+      "action_type": "hotkey",
+      "keys": [
+        "shift",
+        "right"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Zoom In Timeline",
+      "action_type": "press",
+      "keys": [
+        "="
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Zoom Out Timeline",
+      "action_type": "press",
+      "keys": [
+        "-"
+      ]
+    },
+    "OPEN_PALM": {
+      "description": "Play / Stop Timeline",
+      "action_type": "press",
+      "keys": [
+        "space"
+      ]
+    },
+    "FIST": {
+      "description": "Ripple Delete Clip",
+      "action_type": "hotkey",
+      "keys": [
+        "shift",
+        "delete"
+      ]
+    },
+    "POINTING": {
+      "description": "Selection Tool",
+      "action_type": "press",
+      "keys": [
+        "v"
+      ]
+    },
+    "PEACE": {
+      "description": "Mark In Point",
+      "action_type": "press",
+      "keys": [
+        "i"
+      ]
+    }
+  },
+  "figma": {
+    "PINCH": {
+      "description": "Select & Drag",
+      "action_type": "click",
+      "keys": []
+    },
+    "SWIPE_LEFT": {
+      "description": "Undo Canvas Action",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "z"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Redo Canvas Action",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "y"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Zoom In Canvas",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "="
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Zoom Out Canvas",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "-"
+      ]
+    },
+    "OPEN_PALM": {
+      "description": "Hand / Pan Tool",
+      "action_type": "press",
+      "keys": [
+        "h"
+      ]
+    },
+    "FIST": {
+      "description": "Delete Selection",
+      "action_type": "press",
+      "keys": [
+        "delete"
+      ]
+    },
+    "POINTING": {
+      "description": "Move / Pointer Tool",
+      "action_type": "press",
+      "keys": [
+        "v"
+      ]
+    },
+    "PEACE": {
+      "description": "Toggle UI Zen Mode",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "\\"
+      ]
+    }
+  },
+  "browser": {
+    "PINCH": {
+      "description": "Click",
+      "action_type": "click",
+      "keys": []
+    },
+    "SWIPE_LEFT": {
+      "description": "Previous Tab",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "shift",
+        "tab"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Next Tab",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "tab"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Scroll Up",
+      "action_type": "press",
+      "keys": [
+        "pageup"
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Scroll Down",
+      "action_type": "press",
+      "keys": [
+        "pagedown"
+      ]
+    },
+    "FIST": {
+      "description": "Close Tab",
+      "action_type": "hotkey",
+      "keys": [
+        "ctrl",
+        "w"
+      ]
+    }
+  },
+  "media": {
+    "PINCH": {
+      "description": "Play / Pause",
+      "action_type": "press",
+      "keys": [
+        "space"
+      ]
+    },
+    "SWIPE_LEFT": {
+      "description": "Previous Track",
+      "action_type": "press",
+      "keys": [
+        "prevtrack"
+      ]
+    },
+    "SWIPE_RIGHT": {
+      "description": "Next Track",
+      "action_type": "press",
+      "keys": [
+        "nexttrack"
+      ]
+    },
+    "SWIPE_UP": {
+      "description": "Volume Up",
+      "action_type": "press",
+      "keys": [
+        "volumeup"
+      ]
+    },
+    "SWIPE_DOWN": {
+      "description": "Volume Down",
+      "action_type": "press",
+      "keys": [
+        "volumedown"
+      ]
+    }
+  },
+  "presentation": {
+    "SWIPE_RIGHT": {
+      "description": "Next Slide",
+      "action_type": "press",
+      "keys": [
+        "right"
+      ]
+    },
+    "SWIPE_LEFT": {
+      "description": "Previous Slide",
+      "action_type": "press",
+      "keys": [
+        "left"
+      ]
+    },
+    "OPEN_PALM": {
+      "description": "Start Presentation",
+      "action_type": "press",
+      "keys": [
+        "f5"
+      ]
+    },
+    "FIST": {
+      "description": "End Presentation",
+      "action_type": "press",
+      "keys": [
+        "esc"
+      ]
+    }
+  }
+}

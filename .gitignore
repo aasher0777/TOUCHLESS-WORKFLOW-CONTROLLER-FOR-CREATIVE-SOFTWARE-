@@ -1,0 +1,36 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# PyInstaller Build Artifacts (Keep gesture_controller.spec in source control)
+build/
+dist/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Project scratch / agent temp data
+scratch/
+
+# Training and raw dataset archives
+archive*/
+archive*/**
+
+# Mobile & Gradle build caches
+.gradle/
+**/.gradle/
+.dart_tool/
