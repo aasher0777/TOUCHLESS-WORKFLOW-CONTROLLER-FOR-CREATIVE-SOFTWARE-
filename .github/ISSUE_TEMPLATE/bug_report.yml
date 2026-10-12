@@ -1,0 +1,66 @@
+name: "🐛 Bug Report"
+description: File a bug report or runtime failure
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please check existing issues first before submitting.
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: When performing pinch gesture in Adobe Premiere Pro, the razor cut macro fails to trigger...
+    validations:
+      required: true
+  - type: dropdown
+    id: subsystem
+    attributes:
+      label: Affected Subsystem
+      description: Select which component is exhibiting the bug.
+      options:
+        - "Member 1: Camera Acquisition & 3D Normalization"
+        - "Member 2: MediaPipe Inference & Deep Learning Models"
+        - "Member 3: Continuous 3D Math & Gesture State Machine"
+        - "Member 4: Context Routing & Macro Dispatch"
+        - "Member 5: UI Dashboard & Developer Workbench"
+        - "Cross-Platform Flutter Companion"
+        - "PyInstaller Standalone Executable"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11 / 10 (x64)
+        - Linux (Ubuntu/Debian)
+        - macOS (Apple Silicon / Intel)
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      placeholder: e.g. Python 3.10.12 or 3.11.8
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Run `python main.py`
+        2. Open Adobe Premiere Pro
+        3. Perform pinch gesture (Node 4 to 8)
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Terminal Logs / Stack Trace
+      description: Copy and paste relevant terminal output or tracebacks.
+      render: shell

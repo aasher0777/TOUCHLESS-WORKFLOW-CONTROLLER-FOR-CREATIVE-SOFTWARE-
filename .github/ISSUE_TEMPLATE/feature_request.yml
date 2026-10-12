@@ -1,0 +1,42 @@
+name: "💡 Feature Request"
+description: Propose a new gesture, creative application integration, or enhancement
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make touchless workflow control even better? Share your proposal below!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem or workflow limitation?
+      placeholder: Currently, switching between Premiere timelines requires manual keyboard input...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution / Feature
+      description: Describe your proposed gesture, algorithm, or integration.
+      placeholder: Add support for Blender 3D viewport rotation using continuous 3D two-finger gesture...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      options:
+        - "New Gesture Recognition"
+        - "Creative Application Profile (e.g. Blender, Photoshop, DaVinci)"
+        - "UI Dashboard / Calibration Enhancement"
+        - "Performance Optimization"
+        - "Cross-Platform Feature"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you've considered.
