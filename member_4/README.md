@@ -1,4 +1,4 @@
-# 🎯 Member 4: OS Context & Automation Specialist (Swastik)
+# 🎯 Member 4: OS Context & Automation Specialist ([Swastik Panda](https://github.com/Swastik54321))
 
 ## 📌 Responsibilities & Architecture Role
 * **Context Routing Queries**: Active foreground application detection using `pygetwindow` with low-overhead TTL caching to detect target creative suites (**Adobe Premiere Pro**, **Figma**), browsers, media players, and presentation software.
