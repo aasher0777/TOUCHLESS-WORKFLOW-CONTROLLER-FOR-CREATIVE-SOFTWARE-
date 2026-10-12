@@ -1,4 +1,4 @@
-# 🖥️ Member 5: Packaging, UI & Release Manager (Rahul)
+# 🖥️ Member 5: Packaging, UI & Release Manager ([rusher11225-del](https://github.com/rusher11225-del))
 
 ## 📌 Responsibilities & Architecture Role
 * **Visual Dashboard & Developer Workbench**: Lightweight dark-themed Tkinter dashboard (`member_5.py`) featuring an interactive gesture catalog, live 2D/3D skeleton canvas with glowing node halos, real-time Euclidean distance gauge, synthetic calibration simulator, and JSON profile manager.
