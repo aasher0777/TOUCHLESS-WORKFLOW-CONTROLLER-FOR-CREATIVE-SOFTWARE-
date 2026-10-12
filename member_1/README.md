@@ -1,4 +1,4 @@
-# 📷 Member 1: Camera & Preprocessing Lead (Ashirbad)
+# 📷 Member 1: Camera & Preprocessing Lead ([Ashirbad Jena](https://github.com/ashirbadjena2005-code))
 
 ## 📌 Responsibilities & Architecture Role
 * **Webcam Ingestion**: Connects the system to standard USB or integrated laptop webcams (`cv2.VideoCapture`) with multi-backend fallback (DirectShow, MSMF, V4L) and smart sensor warmup.
