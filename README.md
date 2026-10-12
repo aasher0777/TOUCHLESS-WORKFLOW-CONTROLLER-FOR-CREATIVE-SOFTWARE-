@@ -265,11 +265,11 @@ The repository is modularly organized across five specialized member folders, ea
 
 | Member & Role | Dedicated Folder | Primary Code Files | Key Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Member 1: Camera & Preprocessing Lead**<br>*(Ashirbad)* | [`member_1/`](member_1/) | [`member_1.py`](member_1/member_1.py) | • Connects to USB/laptop webcams via DirectShow/MSMF/V4L<br>• Zero-copy active RAM ring buffer (`collections.deque`)<br>• Aspect center-cropping, scaling & BGR-to-RGB conversion |
-| **Member 2: Perceptual Pipeline (ML) Engineer**<br>*(Aryan)* | [`member_2/`](member_2/) | [`member_2.py`](member_2/member_2.py)<br>• [`model.py`](member_2/model.py)<br>• [`dataset.py`](member_2/dataset.py)<br>• [`train.py`](member_2/train.py)<br>• [`evaluate.py`](member_2/evaluate.py) | • MediaPipe Hands integration (legacy & Tasks API)<br>• Stage 1 Palm Detector bounding box estimation<br>• Stage 2 21 3D joint coordinate inference ($X, Y, Z$)<br>• Deep MLP and CNN PyTorch training & evaluation |
-| **Member 3: State-Machine Logic Developer**<br>*(Subham)* | [`member_3/`](member_3/) | [`member_3.py`](member_3/member_3.py) | • 9-gesture 3D coordinate dictionary (`GESTURE_DICTIONARY`)<br>• C-accelerated Euclidean distance calculations (`math.dist`)<br>• Node 4 (Thumb) to Node 8 (Index) pinch state-machine |
-| **Member 4: OS Context & Automation Specialist**<br>*(Swastik)* | [`member_4/`](member_4/) | [`member_4.py`](member_4/member_4.py)<br>• [`custom_profiles.json`](member_4/custom_profiles.json) | • Context routing queries via `pygetwindow` with TTL caching<br>• Matches gesture state with application dictionaries (Premiere, Figma)<br>• Dual dispatch engine via `keyboard` and `pyautogui` |
-| **Member 5: Packaging, UI & Release Manager**<br>*(Rahul)* | [`member_5/`](member_5/) | [`member_5.py`](member_5/member_5.py)<br>• [`package_app.py`](member_5/package_app.py)<br>• [`gesture_controller.spec`](member_5/gesture_controller.spec) | • Modern Tkinter dark dashboard & developer workbench<br>• Standalone `.exe` compilation via PyInstaller<br>• GitHub Actions 3-stage CI/CD & distribution landing page |
+| **Member 1: Camera & Preprocessing Lead**<br>*(Ashirbad Jena — [@ashirbadjena2005-code](https://github.com/ashirbadjena2005-code))* | [`member_1/`](member_1/) | [`member_1.py`](member_1/member_1.py) | • Connects to USB/laptop webcams via DirectShow/MSMF/V4L<br>• Zero-copy active RAM ring buffer (`collections.deque`)<br>• Aspect center-cropping, scaling & BGR-to-RGB conversion |
+| **Member 2: Perceptual Pipeline (ML) Engineer**<br>*(Aryan — [@OM200328](https://github.com/OM200328))* | [`member_2/`](member_2/) | [`member_2.py`](member_2/member_2.py)<br>• [`model.py`](member_2/model.py)<br>• [`dataset.py`](member_2/dataset.py)<br>• [`train.py`](member_2/train.py)<br>• [`evaluate.py`](member_2/evaluate.py) | • MediaPipe Hands integration (legacy & Tasks API)<br>• Stage 1 Palm Detector bounding box estimation<br>• Stage 2 21 3D joint coordinate inference ($X, Y, Z$)<br>• Deep MLP and CNN PyTorch training & evaluation |
+| **Member 3: State-Machine Logic Developer**<br>*(Subham Pattnaik — [@aasher0777](https://github.com/aasher0777))* | [`member_3/`](member_3/) | [`member_3.py`](member_3/member_3.py) | • 9-gesture 3D coordinate dictionary (`GESTURE_DICTIONARY`)<br>• C-accelerated Euclidean distance calculations (`math.dist`)<br>• Node 4 (Thumb) to Node 8 (Index) pinch state-machine |
+| **Member 4: OS Context & Automation Specialist**<br>*(Swastik Panda — [@Swastik54321](https://github.com/Swastik54321))* | [`member_4/`](member_4/) | [`member_4.py`](member_4/member_4.py)<br>• [`custom_profiles.json`](member_4/custom_profiles.json) | • Context routing queries via `pygetwindow` with TTL caching<br>• Matches gesture state with application dictionaries (Premiere, Figma)<br>• Dual dispatch engine via `keyboard` and `pyautogui` |
+| **Member 5: Packaging, UI & Release Manager**<br>*(rusher11225-del — [@rusher11225-del](https://github.com/rusher11225-del))* | [`member_5/`](member_5/) | [`member_5.py`](member_5/member_5.py)<br>• [`package_app.py`](member_5/package_app.py)<br>• [`gesture_controller.spec`](member_5/gesture_controller.spec) | • Modern Tkinter dark dashboard & developer workbench<br>• Standalone `.exe` compilation via PyInstaller<br>• GitHub Actions 3-stage CI/CD & distribution landing page |
 
 ---
 
@@ -300,12 +300,66 @@ TOUCHLESS-WORKFLOW-CONTROLLER-FOR-CREATIVE-SOFTWARE-/
 ├── requirements.txt              # Core project dependencies
 ├── utils.py                      # Shared helper functions & math primitives
 ├── verify_all.py                 # Automated 7-subsystem verification suite
+├── CONTRIBUTORS.md               # GitHub contributors & engineering credits
 ├── CONTRIBUTING.md               # Contribution guidelines & code style
 ├── CODE_OF_CONDUCT.md            # Contributor Covenant Code of Conduct
 ├── SECURITY.md                   # Vulnerability reporting policy
 ├── LICENSE                       # MIT Open Source License
 └── README.md                     # Comprehensive repository documentation
 ```
+
+---
+
+## 👥 Contributors
+
+Thank you to the core engineering team and contributors who built **Gesture Studio Pro**:
+
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://github.com/aasher0777">
+        <img src="https://avatars.githubusercontent.com/u/178821568?v=4" width="75px;" alt="Subham Pattnaik" style="border-radius: 50%;"/><br />
+        <sub><b>Subham Pattnaik</b></sub>
+      </a><br />
+      <sub><a href="https://github.com/aasher0777">@aasher0777</a></sub><br />
+      <sub>👑 Lead / Member 3</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/ashirbadjena2005-code">
+        <img src="https://avatars.githubusercontent.com/u/232292108?v=4" width="75px;" alt="Ashirbad Jena" style="border-radius: 50%;"/><br />
+        <sub><b>Ashirbad Jena</b></sub>
+      </a><br />
+      <sub><a href="https://github.com/ashirbadjena2005-code">@ashirbadjena2005-code</a></sub><br />
+      <sub>📷 Member 1 Lead</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/OM200328">
+        <img src="https://avatars.githubusercontent.com/u/190927635?v=4" width="75px;" alt="Aryan" style="border-radius: 50%;"/><br />
+        <sub><b>Aryan</b></sub>
+      </a><br />
+      <sub><a href="https://github.com/OM200328">@OM200328</a></sub><br />
+      <sub>🧠 Member 2 Lead</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/Swastik54321">
+        <img src="https://avatars.githubusercontent.com/u/188344634?v=4" width="75px;" alt="Swastik Panda" style="border-radius: 50%;"/><br />
+        <sub><b>Swastik Panda</b></sub>
+      </a><br />
+      <sub><a href="https://github.com/Swastik54321">@Swastik54321</a></sub><br />
+      <sub>🎯 Member 4 Lead</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://github.com/rusher11225-del">
+        <img src="https://avatars.githubusercontent.com/u/304780301?v=4" width="75px;" alt="rusher11225-del" style="border-radius: 50%;"/><br />
+        <sub><b>rusher11225-del</b></sub>
+      </a><br />
+      <sub><a href="https://github.com/rusher11225-del">@rusher11225-del</a></sub><br />
+      <sub>🖥️ Member 5 Lead</sub>
+    </td>
+  </tr>
+</table>
+
+*For complete details on roles and architectural ownership, see [`CONTRIBUTORS.md`](CONTRIBUTORS.md).*
 
 ---
 

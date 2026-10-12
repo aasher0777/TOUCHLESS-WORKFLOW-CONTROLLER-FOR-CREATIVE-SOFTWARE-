@@ -1,4 +1,4 @@
-# 📐 Member 3: State-Machine Logic Developer (Subham)
+# 📐 Member 3: State-Machine Logic Developer ([Subham Pattnaik](https://github.com/aasher0777))
 
 ## 📌 Responsibilities & Architecture Role
 * **3D Gesture Dictionary**: Formalizes the mathematical gesture dictionary (`GESTURE_DICTIONARY`) mapping 9 distinct gestures to 3D joint node indices, key formulas, and actionable trigger rules.

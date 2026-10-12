@@ -1,0 +1,68 @@
+{
+  "projectName": "TOUCHLESS-WORKFLOW-CONTROLLER-FOR-CREATIVE-SOFTWARE-",
+  "projectOwner": "aasher0777",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md",
+    "CONTRIBUTORS.md"
+  ],
+  "imageSize": 100,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "aasher0777",
+      "name": "Subham Pattnaik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178821568?v=4",
+      "profile": "https://github.com/aasher0777",
+      "contributions": [
+        "code",
+        "design",
+        "maintenance",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "ashirbadjena2005-code",
+      "name": "Ashirbad Jena",
+      "avatar_url": "https://avatars.githubusercontent.com/u/232292108?v=4",
+      "profile": "https://github.com/ashirbadjena2005-code",
+      "contributions": [
+        "code",
+        "video"
+      ]
+    },
+    {
+      "login": "OM200328",
+      "name": "Aryan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/190927635?v=4",
+      "profile": "https://github.com/OM200328",
+      "contributions": [
+        "code",
+        "data"
+      ]
+    },
+    {
+      "login": "Swastik54321",
+      "name": "Swastik Panda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/188344634?v=4",
+      "profile": "https://github.com/Swastik54321",
+      "contributions": [
+        "code",
+        "plugin"
+      ]
+    },
+    {
+      "login": "rusher11225-del",
+      "name": "rusher11225-del",
+      "avatar_url": "https://avatars.githubusercontent.com/u/304780301?v=4",
+      "profile": "https://github.com/rusher11225-del",
+      "contributions": [
+        "code",
+        "design",
+        "package"
+      ]
+    }
+  ],
+  "contributorsPerLine": 5
+}
