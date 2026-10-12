@@ -1,4 +1,4 @@
-# 🧠 Member 2: Perceptual Pipeline (ML) Engineer (Aryan)
+# 🧠 Member 2: Perceptual Pipeline (ML) Engineer ([Aryan](https://github.com/OM200328))
 
 ## 📌 Responsibilities & Architecture Role
 * **MediaPipe Framework Integration**: Integrates Google's pre-trained MediaPipe Hands framework with dual compatibility across legacy `mp.solutions.hands` and modern MediaPipe Tasks API (`hand_landmarker.task`).
