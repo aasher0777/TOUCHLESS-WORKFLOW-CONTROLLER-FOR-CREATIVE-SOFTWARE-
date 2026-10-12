@@ -26,9 +26,6 @@ Thumbs.db
 # Project scratch / agent temp data
 scratch/
 
-# Training and raw dataset archives
-archive*/
-archive*/**
 
 # Mobile & Gradle build caches
 .gradle/
