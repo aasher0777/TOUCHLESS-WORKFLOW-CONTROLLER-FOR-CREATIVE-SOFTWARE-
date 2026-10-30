@@ -19,21 +19,21 @@ try:
     import pyautogui
     pyautogui.FAILSAFE = True
     PYAUTOGUI_AVAILABLE = True
-except ImportError:
+except (ImportError, Exception):
     pyautogui = None
     PYAUTOGUI_AVAILABLE = False
 
 try:
     import keyboard
     KEYBOARD_AVAILABLE = True
-except ImportError:
+except (ImportError, Exception):
     keyboard = None
     KEYBOARD_AVAILABLE = False
 
 try:
     import pygetwindow as gw
     PYGETWINDOW_AVAILABLE = True
-except ImportError:
+except (ImportError, Exception):
     gw = None
     PYGETWINDOW_AVAILABLE = False
 

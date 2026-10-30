@@ -5,12 +5,13 @@ Contains the state-machine logic to calculate Euclidean distances between nodes
 (such as the thumb tip and index tip) to classify gestures like "Pinch" or "Swipe".
 """
 
+from __future__ import annotations
 from collections import deque
 from dataclasses import dataclass, field
 from enum import Enum, auto
 import math
 import time
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 try:
     from member_2.member_2 import HandLandmarksResult, LandmarkInference
 except ImportError:

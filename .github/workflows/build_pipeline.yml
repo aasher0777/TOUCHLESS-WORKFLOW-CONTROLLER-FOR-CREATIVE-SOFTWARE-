@@ -40,7 +40,9 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgl1-mesa-glx libglib2.0-0 xvfb
+          sudo apt-get install -y libgl1 libglib2.0-0 xvfb python3-tk
+          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
 
       - name: Install Python Dependencies
         run: |
