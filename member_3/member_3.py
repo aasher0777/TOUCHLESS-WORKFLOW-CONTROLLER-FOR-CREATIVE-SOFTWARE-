@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 from enum import Enum, auto
 import math
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Deque, Dict, List, Optional, Tuple
 try:
     from member_2.member_2 import HandLandmarksResult, LandmarkInference
 except ImportError:
